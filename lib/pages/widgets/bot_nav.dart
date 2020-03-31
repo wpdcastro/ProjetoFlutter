@@ -14,19 +14,23 @@ class BotNav extends StatelessWidget {
       child: BottomNavigationBar(
         items: const <BottomNavigationBarItem> [
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            title: Text('Vendas'),
+            icon: Icon(Icons.local_grocery_store),
+            title: Text('Nova Venda'),
           ),
+
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             title: Text('Home'),
+            
           ),
+
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            title: Text('Encomendas'),
+            icon: Icon(Icons.add_box,
+            ),
+            title: Text('Nova Encomenda'),
           ),
         ],
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.lightBlue,
         onTap: _onItemTapped,
       ),
     );

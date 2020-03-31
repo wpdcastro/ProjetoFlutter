@@ -45,25 +45,25 @@ class MenuPage extends StatelessWidget {
               MenuItem(  
                 name: 'Encomendas',
                 icon: Icon(
-                  Icons.android,
+                  Icons.local_atm,
                   color: Colors.white,
                   size: 55.0,
                 ),
-                route: ConstantRoutes.StockPageRoute,
+                route: ConstantRoutes.OrderPageRoute,
               ),
               MenuItem(  
                 name: 'Vendas', 
                 icon: Icon(
-                  Icons.favorite,
+                  Icons.local_grocery_store,
                   color: Colors.white,
                   size: 55.0,
                 ),
-                route: ConstantRoutes.LoginPageRoute,
+                route: ConstantRoutes.SellPageRoute,
               ),
               MenuItem(  
                 name: 'Estoque',
                 icon: Icon(
-                  Icons.favorite,
+                  Icons.folder,
                   color: Colors.white,
                   size: 55.0,
                 ),
@@ -72,11 +72,11 @@ class MenuPage extends StatelessWidget {
               MenuItem(  
                 name: 'Configurações',
                 icon: Icon(
-                  Icons.favorite,
+                  Icons.phonelink_setup,
                   color: Colors.white,
                   size: 55.0,
                 ),
-                route: ConstantRoutes.StockPageRoute,
+                route: ConstantRoutes.ConfigPageRoute,
               ),
             ],
           )

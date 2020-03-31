@@ -27,27 +27,31 @@ class AppBarMenu extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 20
-                ),
-                child: Text('Olá', 
+            children: <Widget> [
+              Container( 
+                height: 30,
+                child: Text('Bem vindo(a) ao',
                   style: TextStyle(
-                    fontFamily: 'Google',  
-                    fontSize: 28,
+                    fontSize: 22,
+                    fontFamily: 'Google',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 10
-                ),
-                child: Text('User', 
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget> [
+              Container( 
+                
+                child: Text('Encomendei', 
                   style: TextStyle(
-                    fontFamily: 'Google', 
-                    fontWeight: FontWeight.bold, 
-                    fontSize: 28,
+                    fontSize: 38,
+                    fontFamily: 'Google',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
               ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:frio_ai/models/pokeapi.dart';
+import 'package:frio_ai/pages/add_product/add_product.dart';
+import 'package:frio_ai/pages/reset_password/reset_password.page.dart';
 import 'package:frio_ai/pages/stock_page/widgets/app_bar_home.dart';
 import 'package:frio_ai/pages/stock_page/widgets/item.dart';
 import 'package:frio_ai/pages/widgets/bot_nav.dart';
@@ -34,6 +36,61 @@ class StockPage extends StatelessWidget {
 
                 SizedBox(
                   height: 20,
+                ),
+
+                Container(
+                  height: 60,
+                  alignment: Alignment.centerLeft,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      stops: [0.3, 1],
+                      colors: [
+                        Color(0xFFF58524),
+                        Color(0XFFF9287F),
+                      ],
+                    ),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(5),
+                    ),
+                  ),
+                  child: SizedBox.expand(
+                    child: FlatButton(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget> [
+                          Text(
+                            "Adicionar Produto",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 20,
+                            ),
+                          ),
+                          Container(
+                            child: SizedBox(
+                            //child: Image.asset("assets/icons/login.png"),
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
+                              height: 28,
+                              width: 28,
+                            ),
+                          ),
+                        ],
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                          builder: (context) => AddProductPage(),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
                 ),
 
                 Container(
