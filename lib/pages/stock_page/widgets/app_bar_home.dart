@@ -5,14 +5,14 @@ class AppBarHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.lightBlueAccent,
-      height: 120,
+      height: 90,
       child: Column(
         children: <Widget>[
           Container(
             height: 50,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
+              children: <Widget> [
                 Padding(
                   padding: EdgeInsets.only(
                     top:13, 

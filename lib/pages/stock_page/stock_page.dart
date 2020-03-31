@@ -3,6 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:frio_ai/models/pokeapi.dart';
 import 'package:frio_ai/pages/stock_page/widgets/app_bar_home.dart';
 import 'package:frio_ai/pages/stock_page/widgets/item.dart';
+import 'package:frio_ai/pages/widgets/bot_nav.dart';
 import 'package:frio_ai/store/poket_api_store.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
@@ -16,6 +17,7 @@ class StockPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
+      bottomNavigationBar: BotNav(),
       body: Stack(
         children: <Widget> [
           Container(
@@ -29,6 +31,29 @@ class StockPage extends StatelessWidget {
                 ),
 
                 AppBarHome(),
+
+                SizedBox(
+                  height: 20,
+                ),
+
+                Container(
+                  width: 330,
+                  child: TextField(
+                    keyboardType: TextInputType.text,
+                    decoration: InputDecoration(
+                      icon: Icon(Icons.search, 
+                        color: Colors.lightBlue,
+                      ),
+                      labelText: "Produto X",
+                      labelStyle: TextStyle(
+                        color: Colors.black38,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 20,
+                      ),
+                    ),
+                    style: TextStyle(fontSize: 20,),
+                  ),
+                ),
 
                 Expanded(
                   child: Container(

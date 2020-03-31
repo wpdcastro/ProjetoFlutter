@@ -20,32 +20,27 @@ class MenuItem extends StatelessWidget {
       padding: const EdgeInsets.all(20.0),
       child: Container(
         child: Stack(
-          children: <Widget>[
+          children: <Widget> [
             Column(
               children: <Widget> [
-                Center(
-                  child: Ink(
-                    child: IconButton(
-                      icon: Icon(Icons.android),
-                      color: Colors.white,
-                      onPressed: () {
-                        //Navigator.pushNamed(context, route);
-                        Navigator.pushNamed(context, '/login');
-                      },
-                    ),
+                Container(
+                  height: 90,
+                  width: 130,
+                  child: FlatButton(
+                    child: icon,
+                    onPressed: () {
+                      Navigator.pushNamed(context, route);
+                    },
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(32.0),
-                  child: Text(name, 
-                    style: TextStyle(
-                      fontFamily: 'Google', 
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  )
+
+                Text(name, style: 
+                  TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
+
               ],
             ),
           ],
